@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 this is the master text!
+=======
+This is the branch tezxt!
+>>>>>>> test
