@@ -1,0 +1,505 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+
+/*GENERAL LAYOUT/TEXT/FORMAT /*Region*/
+/***************************************************************************************************************
+CSS RESET
+***********************************************/
+
+* {
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+/*******************************************************************************
+COLUMNS AND LAYOUT
+***********************************************/
+
+.Wrapper {
+    width: 90%;
+    margin: auto;
+}
+
+.row {
+    margin:20px 0px 20px 0px;
+}
+
+.sm-col-1 {
+    width:33.33%;
+    display: inline-block;
+    padding:10px 10px 10px 10px;
+}
+
+.sm-col-2 {
+    width:50%;
+    display: inline-block;
+    padding:10px 10px 0px 10px;
+}
+
+.sm-col-3 {
+    width:100%;
+    display:block;
+    padding:10px 10px 10px 10px;
+}
+
+/***************************************************************************************************************
+Text Formating
+***********************************************/
+@font-face {
+  font-family: 'Quicksand';
+  src: url("fonts/Quicksand-Regular.otf"); /* IE9 Compat Modes */
+}
+
+html { 
+	font-size: 62.5%;
+	line-height: 300%;
+} 
+
+body { 
+	font-size: 16px; font-size: 1.6rem; 
+}
+
+h1,h2, h3 {
+    font-family:'Open sans', sans-serif;
+    color:#333333;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+    h1, h2{
+        font-size: 20px; font-size: 2rem;
+    }
+
+	h3 {
+		font-size:15px; font-size: 1.5rem;
+		color:gray;
+		margin-bottom: 10px;
+	}
+
+Header h1 {
+	text-align: center;
+}
+	Header h1, Header h2, Header nav li, Header nav li a {
+		font-size:20px;font-size: 2rem;
+	}
+
+    Header .col-2:nth-child(2) {
+            text-align: center;
+        }
+
+	Header div.col-2 h1 {
+		border-bottom: 2px solid lightgray;
+	}
+
+/*Adjust font size, remove list markings*/
+ul,a,p,li, a {
+    font-family:'Open sans', sans-serif;
+    color:#333333;
+    text-decoration: none;
+    font-size: 14px; font-size: 1.4rem; 
+}
+
+/* Adds bottom margin for paragraphs, without ruining top margin */
+p:not(:last-of-type) {
+    margin: 0 0 20px 0;
+}
+
+img {
+    border-radius: 2px;
+}
+
+/*endRegion*/
+
+/*JQUERY CHANGES*/ /*Region*/
+/***************************************************************************************************************
+Jquery CHANGES
+***********************************************/
+
+#dimBackground {
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.8);
+    position:fixed;
+    top:0;
+    left:0;
+    text-align: center;
+    display:none;
+}
+
+#dimBackground img {
+	position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width:auto;
+    max-width:95%;
+    max-height:95%;
+}
+
+.photoGallery img {
+	width: 100%;
+}
+
+/*endRegion*/
+
+/*PAGE*CHANGES//*Region*/
+/***************************************************************************************************************
+NAV STATE CHANGES
+***********************************************/
+
+li.visited a {
+    box-sizing: border-box;
+    color: #333333;
+    background-color:white;
+    border-radius:1px;
+    padding:10px;
+}
+
+/***************************************************************************************************************
+NAV  MENU
+***********************************************/
+
+nav, ul, li {
+    display:inline-block
+}
+    
+#hoverMenuWrap {
+    display:inline-block;
+}
+
+    #hoverMenuWrap li {
+        position:relative;
+        margin-left:50px;
+    }
+
+    #hoverMenuWrap li  a:hover {
+        background-color: white;
+        color:#333333;
+        border-radius: 3px;
+    }
+
+#hoverMenuWrap #dropDownMenu {
+	width: auto;
+	display: none;
+    position:absolute;
+    right: 0;
+}
+
+	#hoverMenuWrap:hover #dropDownMenu  {
+		display:block;
+	}
+
+	ul#dropDownMenu li {
+		display:block;
+		padding: 8px;
+		margin:8px 0px 8px 0px;
+		border-radius: 3px;
+		background-color: #333333;
+		text-align: center;   
+	}
+
+	#dropDownMenu li a {
+		color:white;
+		display:block;
+	}
+
+	ul#dropDownMenu li:not(:first-child) {
+		margin: 10px 0 0 0;  
+	}
+
+/***************************************************************************************************************
+RESUME
+***********************************************/
+
+ .col-2, .col-1  {
+    vertical-align:text-top;
+}
+
+/*Make Portrait Centered*/
+.resume.row > .col-2:first-of-type { 
+    text-align: center;
+}
+	/*Verticall Aligns Profile Picture*/
+	.container {
+		display:flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.child {
+		flex:1;
+	}
+
+	/*Makes Portrait Circular */
+	.resume.row .sm-col-3 img {
+		width: 500px;
+		max-width: 100%;
+		border-radius: 100%;
+	}
+
+/* Add line/margin underneath "About me" heading" */
+.resume.row:nth-of-type(2) {
+    padding: 0 0 35px 0;
+    border-bottom: 2px solid lightgray;
+}
+
+	.resume.row:nth-of-type(2) h2 {
+		margin-bottom: 20px;
+		display: inline-block;
+		border-bottom: solid 2px gray;
+		color:#333333;
+		text-align: center;
+	}
+
+	/* Turn Skills, and its listing into block elements */
+	.resume.row:nth-of-type(2) section:nth-of-type(2) ul{
+		display: block;
+	}
+
+	.resume.row:nth-of-type(2) section:nth-of-type(2) ul > li {
+		margin:0 0 10px 0;
+		list-style: square;
+		display: block;
+		display: list-item;
+		list-style-position: inside;
+		text-align: left;
+	}
+
+	.resume.row:nth-of-type(2) section:nth-of-type(3) p {
+		text-align: left;
+	}
+
+	.resume.row:nth-of-type(3) h3 {
+		margin: 0 0 20px 0;
+		color:gray;
+	}
+
+/**************************************************************************************************
+MAIN ARTWORK GALLERY
+***********************************************/
+.mainArtworkGallery .col-2:nth-of-type(2) h3 {
+        font-size: 40px;font-size: 4rem;
+    }
+
+/* Main banner image */
+.mainArtworkGallery.row.col-3 img {
+    width:100%;  
+    border-radius: 3px;
+    vertical-align: middle;
+}
+
+.mainArtworkGallery.row.col-3 img {
+    width:100%;
+    border-radius: 10px;
+    vertical-align: middle;
+}  
+
+.mainArtworkGallery.row:nth-of-type(2) section:nth-of-type(2)  {
+    text-align: center;
+}
+
+.mainArtworkGallery.row:nth-of-type(2) section:nth-of-type(2) img  {
+    max-width: 400px;
+    width: 100%;
+}
+
+.mainArtworkGallery.row:nth-of-type(2) {
+    border-bottom: solid 2px lightgray;  
+}
+
+/*Shows image you are selecting in gallery*/
+.mainArtworkGallery li img:hover {
+    border: 5px solid white;
+}
+
+.mainArtworkGallery li img {
+    vertical-align: middle;
+    width:100%;
+}
+
+/*************************************************************************************************************************************
+WRITINGSAMPLES
+***********************************************/
+
+/*LAYOUT*/
+
+.row.writingSamples:nth-child(2) {
+	border-bottom: 2px solid lightgray;
+}
+
+	/*Main Menu Text*/
+	.popOutWriting > ul > li p {
+		text-decoration:underline;
+		text-align: center;
+		font-size:25px; font-size:2.5rem;
+	}
+
+/*SUBMENU*/
+
+.popOutWriting {
+	text-align: center;
+}
+
+	.popOutWriting li ul{
+		margin: 40px;
+		display: block;
+	}
+	/*SubMenu items*/
+	.popOutWriting li ul li {
+		text-align: center;
+		display: inline-block;
+		background-color: lightgray;
+		border: 2px solid white;
+		border-radius: 3px;
+	}
+
+	/*SUBMENU text*/
+	.popOutWriting  li ul li a {
+		width: 100%;
+		padding: 10px;
+		display: inline-block;
+		font-size:20px; font-size: 2rem;
+	}
+
+	/*SUBMENU text*/
+		.popOutWriting  li ul li:hover{
+			background-color: white;
+			color: #333;
+			border-radius: 2px;
+		}
+
+/* ARTICLE LAYOUT*/
+
+/*Center Main Poem body*/
+.popOutWriting article > div{
+	margin-top: 100px;
+	display: none;
+	text-align: center;
+}
+
+	/*Center Inner Poem Body*/
+	.popOutWriting article div div{
+		display: inline-block;
+		text-align: left;
+	}
+
+/*H2 margins*/
+.popOutWriting article h2 {
+	display: block;
+	text-align: center;
+	margin-bottom: 20px;
+	text-decoration: underline;
+}
+
+/***********************************************
+FOOTER
+***********************************************/
+
+/*LAYOUT AND TEXT*/
+
+footer {
+	width:100%;
+	position: absolute;
+    padding: 30px 0 0 0;
+	text-align: center;
+    background-color: #333333;
+}
+	/*Fix footer gap on pages with hidden divs*/
+	.footerFix {
+		margin-top:0px;
+	}
+
+footer a {
+    width: 100%;
+    height:100%;
+}
+
+footer section p, footer section li, footer a {
+    font-size: 16px;font-size: 1.6rem;
+    color:white;
+}
+
+footer .sm-col-3 {
+    padding-bottom: 10px;
+}
+
+/* Add move spacing for clicking links on mobile */
+footer .sm-col-3 {
+    padding-top: 30px;
+}
+/* Add move spacing for clicking links on mobile */
+footer li:first-child {
+    margin-bottom: 30px;
+}
+/* Add move spacing for clicking links on mobile */
+footer li:not(:first-of-type){
+    margin-bottom: 30px;
+    list-style: square;
+    display: block;
+    display: list-item;
+    list-style-position: inside;
+}   
+
+/************************************************/
+
+/* Center, Add dashed line under Contact */
+footer p {
+    width: 80px;
+    border-bottom: 1px dashed white;
+    margin: 0 auto 0px auto;   
+}
+
+/* fixes Anchor tags falling below images*/
+footer img {
+    vertical-align: middle;
+    margin:20px 20px 0 20px;
+    min-width: 32px;
+    max-width:32px;
+}
+
+/*Makes Headlines white and adjusts margins*/
+footer h2 {
+    color:white;
+    font-size:20px;font-size:2rem;
+    display: inline-block;
+    border-bottom: 1px dashed white; 
+}
+
+/* dashed Line under Main Nav heading */
+footer li:first-child {
+    border-bottom: 1px dashed lightgray;
+    margin-bottom: 20px;
+}
+
+    footer li:not(:first-of-type){
+        margin-bottom: 20px;
+        list-style: square;
+        display: block;
+        display: list-item;
+        list-style-position: inside;
+    }
+
+    /* Align all Nav links */
+    footer li:not(:first-child) {
+        text-align: left;
+    }
+
+footer li a:hover {
+    position: relative;
+    padding: 10px;
+    border-radius: 2px;
+    background-color:white;
+    color:#333333;
+}
+
+/*endRegion*/

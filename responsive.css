@@ -1,0 +1,130 @@
+/*Mobile*/ /*Region*/
+
+@media screen and (max-width: 1000px) {
+}
+
+/*EndRegion*/
+
+/*Desktop*/ /*Region*/
+
+@media screen and (min-width: 1001px) {
+  
+/***********************************************
+LAYOUT
+***********************************************/   
+.row {
+    margin:20px 0px 70px 0px;
+}
+
+.Wrapper {
+    width:70%;
+    margin: auto;
+}
+    Header .col-2:first-child {
+        vertical-align: top;
+        text-align: left;
+    }
+ 
+    Header .col-2:nth-child(2) {
+        text-align: right;
+    }
+
+.col-1 {
+    width:33.33%;
+    display: inline-block;
+    padding:10px 10px 10px 10px;
+}
+
+.col-2 {
+    width:50%;
+    display: inline-block;
+    padding:10px 10px 10px 10px;
+}
+
+.col-3 {
+    width:100%;
+    display: inline-block;
+    padding:10px 10px 10px 10px;
+}
+
+.col-4 {
+    width:16.66%;
+    display: inline-block;
+    padding:10px 10px 10px 10px;
+}
+	
+/***********************************************
+TEXT LAYOUT
+***********************************************/
+
+h1, h2 {
+        font-size: 20px; font-size: 2rem;
+    }
+		Header h1 {
+			font-size:16px ;font-size: 1.6rem;
+			text-align: left;
+		}
+
+		Header nav li, Header nav li a {
+			font-size:1.6px;font-size: 1.6rem;
+		}
+	
+    h3 {
+		font-size:16px;font-size:1.6rem;
+        color:gray;
+        margin-bottom: 2px;
+    }
+
+    Header .col-2:nth-child(2) {
+            text-align: right;
+        }
+
+	Header div.col-2 h1 {
+		border-bottom: none;
+	}
+
+/***********************************************
+RESUME
+***********************************************/
+.verticalAligner {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.alignedItem {
+    flex:1;
+}  
+
+/* align content of Resume,Skills, and Contact with columns */
+.resume.row:nth-of-type(2) > section:nth-of-type(1){
+    text-align: center;
+}
+   
+.resume.row:nth-of-type(2) section:nth-of-type(2){
+    text-align: center; 
+}
+    
+.resume.row section:nth-of-type(3){
+    text-align: center; 
+}
+
+/***********************************************
+MAIN ARTWORK GALLERY
+***********************************************/
+
+
+/***********************************************
+WRITING SAMPLES
+*********************************************/
+
+/*Adds Spacing Between Writing Menu Items */
+
+/*Make Sub Menu items absolutely positioned, Increase size of SUB-MENU Backing*/
+
+
+/*Change Sub-menu list items to inline-blocks, change spacing*/
+	
+}
+
+/*endRegion*/
