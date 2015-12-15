@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-yay, im the master branch!
-=======
-yay, im the conflict branch!
->>>>>>> conflictbranch
+Im the master version!
