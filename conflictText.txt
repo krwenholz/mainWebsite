@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 yay, im the master branch!
+=======
+yay, im the conflict branch!
+>>>>>>> conflictbranch
