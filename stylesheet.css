@@ -1,5 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
+@font-face {
+	font-family: 'github';
+	src:url("/icons") format('svg');
+}
+
 @-webkit-keyframes fadeIn {
     from { opacity: 0; }
       to { opacity: 1; }
@@ -243,7 +248,7 @@ RESUME
 	/*Makes Portrait Circular */
 	.resume.row .sm-col-3 img {
 		width: 500px;
-		max-width: 100%;
+		max-width: 50%;
 		border-radius: 100%;
 	}
 
@@ -265,6 +270,11 @@ RESUME
 	.resume.row:nth-of-type(2) section:nth-of-type(2) ul{
 		display: block;
 	}
+	
+		#gitHubIcon {
+			margin-top: 20px;
+			width: 32px; max-width: 32px;
+		}
 
 	.resume.row:nth-of-type(2) section:nth-of-type(2) ul > li {
 		margin:0 0 10px 0;
