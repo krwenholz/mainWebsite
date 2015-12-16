@@ -1,3 +1,4 @@
+
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 @font-face {
@@ -39,19 +40,19 @@ COLUMNS AND LAYOUT
     margin:20px 0px 20px 0px;
 }
 
-.sm-col-1 {
+.col-sm-4 {
     width:33.33%;
     display: inline-block;
     padding:10px 10px 10px 10px;
 }
 
-.sm-col-2 {
+.col-sm-6 {
     width:50%;
     display: inline-block;
     padding:10px 10px 0px 10px;
 }
 
-.sm-col-3 {
+.col-sm-12 {
     width:100%;
     display:block;
     padding:10px 10px 10px 10px;
@@ -85,9 +86,14 @@ h1,h2, h3 {
         font-size: 20px; font-size: 2rem;
     }
 
+	h2 {
+		margin-bottom: 20px;
+	}
+
 	h3 {
 		font-size:15px; font-size: 1.5rem;
 		color:gray;
+		margin-top: -20px;
 		margin-bottom: 10px;
 	}
 
@@ -98,11 +104,11 @@ Header h1 {
 		font-size:20px;font-size: 2rem;
 	}
 
-    Header .col-2:nth-child(2) {
+    Header .col-lg-6:nth-child(2) {
             text-align: center;
         }
 
-	Header div.col-2 h1 {
+	Header div.col-lg-6 h1 {
 		border-bottom: 2px solid lightgray;
 	}
 
@@ -113,6 +119,10 @@ ul,a,p,li, a {
     text-decoration: none;
     font-size: 14px; font-size: 1.4rem; 
 }
+	
+	ul, li {
+		display: block;
+	}
 
 /* Adds bottom margin for paragraphs, without ruining top margin */
 p:not(:last-of-type) {
@@ -122,6 +132,16 @@ p:not(:last-of-type) {
 img {
     border-radius: 2px;
 }
+/***************************************************************************************************************
+GENERAL CLASSES
+***********************************************/
+
+ span.activeHvr:hover {
+	color:gray;
+}
+ .smIcon {
+	width: 32px;max-width: 32px;
+	}
 
 /*endRegion*/
 
@@ -158,6 +178,7 @@ Jquery CHANGES
 /*endRegion*/
 
 /*PAGE*CHANGES//*Region*/
+
 /***************************************************************************************************************
 NAV STATE CHANGES
 ***********************************************/
@@ -174,7 +195,7 @@ li.visited a {
 NAV  MENU
 ***********************************************/
 
-nav, ul, li {
+nav, nav ul, nav li {
     display:inline-block
 }
     
@@ -226,14 +247,21 @@ nav, ul, li {
 RESUME
 ***********************************************/
 
- .col-2, .col-1  {
+ .col-lg-6, .col-lg-4  {
     vertical-align:text-top;
 }
 
 /*Make Portrait Centered*/
-.resume.row > .col-2:first-of-type { 
+.resume.row > .col-lg-6:first-of-type { 
     text-align: center;
 }
+	/*Makes Portrait Circular */
+	.resume.row:first-of-type .col-sm-12 img {
+		min-width: 250px;
+		max-width:40%;
+		border-radius: 100%;
+	}
+
 	/*Verticall Aligns Profile Picture*/
 	.container {
 		display:flex;
@@ -245,13 +273,6 @@ RESUME
 		flex:1;
 	}
 
-	/*Makes Portrait Circular */
-	.resume.row .sm-col-3 img {
-		width: 500px;
-		max-width: 50%;
-		border-radius: 100%;
-	}
-
 /* Add line/margin underneath "About me" heading" */
 .resume.row:nth-of-type(2) {
     padding: 0 0 35px 0;
@@ -259,22 +280,17 @@ RESUME
 }
 
 	.resume.row:nth-of-type(2) h2 {
-		margin-bottom: 20px;
 		display: inline-block;
 		border-bottom: solid 2px gray;
 		color:#333333;
 		text-align: center;
 	}
 
-	/* Turn Skills, and its listing into block elements */
-	.resume.row:nth-of-type(2) section:nth-of-type(2) ul{
+	/*Align and space out Resume icons*/
+	.resume.row:nth-of-type(2) section:first-of-type a ~ a {
 		display: block;
+		margin-top: 20px;
 	}
-	
-		#gitHubIcon {
-			margin-top: 20px;
-			width: 32px; max-width: 32px;
-		}
 
 	.resume.row:nth-of-type(2) section:nth-of-type(2) ul > li {
 		margin:0 0 10px 0;
@@ -289,26 +305,21 @@ RESUME
 		text-align: left;
 	}
 
-	.resume.row:nth-of-type(3) h3 {
-		margin: 0 0 20px 0;
-		color:gray;
-	}
-
 /**************************************************************************************************
 MAIN ARTWORK GALLERY
 ***********************************************/
-.mainArtworkGallery .col-2:nth-of-type(2) h3 {
+.mainArtworkGallery .col-lg-6:nth-of-type(2) h3 {
         font-size: 40px;font-size: 4rem;
     }
 
 /* Main banner image */
-.mainArtworkGallery.row.col-3 img {
+.mainArtworkGallery.row.col-lg-12 img {
     width:100%;  
     border-radius: 3px;
     vertical-align: middle;
 }
 
-.mainArtworkGallery.row.col-3 img {
+.mainArtworkGallery.row.col-lg-12 img {
     width:100%;
     border-radius: 10px;
     vertical-align: middle;
@@ -407,7 +418,6 @@ WRITINGSAMPLES
 .popOutWriting article h2 {
 	display: block;
 	text-align: center;
-	margin-bottom: 20px;
 	text-decoration: underline;
 }
 
@@ -429,22 +439,17 @@ footer {
 		margin-top:0px;
 	}
 
-footer a {
-    width: 100%;
-    height:100%;
-}
-
 footer section p, footer section li, footer a {
     font-size: 16px;font-size: 1.6rem;
     color:white;
 }
 
-footer .sm-col-3 {
+footer .col-sm-12 {
     padding-bottom: 10px;
 }
 
 /* Add move spacing for clicking links on mobile */
-footer .sm-col-3 {
+footer .col-sm-12 {
     padding-top: 30px;
 }
 /* Add move spacing for clicking links on mobile */
@@ -462,11 +467,9 @@ footer li:not(:first-of-type){
 
 /************************************************/
 
-/* Center, Add dashed line under Contact */
-footer p {
-    width: 80px;
-    border-bottom: 1px dashed white;
-    margin: 0 auto 0px auto;   
+/*Add dashed line under Contact */
+footer p span {
+	border-bottom: 1px dashed lightgray;
 }
 
 /* fixes Anchor tags falling below images*/

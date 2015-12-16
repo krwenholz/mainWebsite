@@ -1,14 +1,35 @@
-/*Mobile*/ /*Region*/
+/*TABLET AND PORTRAIT*/ /*Region*/
 
-@media screen and (max-width: 1000px) {
+@media (orientation: landscape), (min-width: 650px) {
+/*******************************************************************************
+COLUMNS AND LAYOUT
+***********************************************/
+.col-md-4 {
+	width:33.33%;
+	display: inline-block;
+	padding:10px 10px 10px 10px;
 }
 
+.col-md-6 {
+    width:50%;
+    display: inline-block;
+    padding:10px 10px 0px 10px;
+}
+
+.col-md-12 {
+    width:100%;
+    display:block;
+    padding:10px 10px 10px 10px;
+}
+	
+}
 /*EndRegion*/
 
-/*Desktop*/ /*Region*/
 
-@media screen and (min-width: 1001px) {
-  
+/*Desktop and Landscape*/ /*Region*/
+
+@media screen and (min-width: 1100px) {
+ 
 /***********************************************
 LAYOUT
 ***********************************************/   
@@ -20,34 +41,34 @@ LAYOUT
     width:70%;
     margin: auto;
 }
-    Header .col-2:first-child {
+    Header .col-lg-6:first-child {
         vertical-align: top;
         text-align: left;
     }
  
-    Header .col-2:nth-child(2) {
+    Header .col-lg-6:nth-child(2) {
         text-align: right;
     }
 
-.col-1 {
+.col-lg-4 {
     width:33.33%;
     display: inline-block;
     padding:10px 10px 10px 10px;
 }
 
-.col-2 {
+.col-lg-6 {
     width:50%;
     display: inline-block;
     padding:10px 10px 10px 10px;
 }
 
-.col-3 {
+.col-lg-12 {
     width:100%;
     display: inline-block;
     padding:10px 10px 10px 10px;
 }
 
-.col-4 {
+.col-lg-2 {
     width:16.66%;
     display: inline-block;
     padding:10px 10px 10px 10px;
@@ -75,17 +96,18 @@ h1, h2 {
         margin-bottom: 2px;
     }
 
-    Header .col-2:nth-child(2) {
+    Header .col-lg-6:nth-child(2) {
             text-align: right;
         }
 
-	Header div.col-2 h1 {
+	Header div.col-lg-6 h1 {
 		border-bottom: none;
 	}
 
 /***********************************************
 RESUME
 ***********************************************/
+
 .verticalAligner {
     display:flex;
     align-items: center;
@@ -97,17 +119,16 @@ RESUME
 }  
 
 /* align content of Resume,Skills, and Contact with columns */
-.resume.row:nth-of-type(2) > section:nth-of-type(1){
+.resume.row:nth-of-type(2){
     text-align: center;
 }
-   
-.resume.row:nth-of-type(2) section:nth-of-type(2){
-    text-align: center; 
-}
-    
-.resume.row section:nth-of-type(3){
-    text-align: center; 
-}
+
+	/*Align and space out Resume icons*/
+	.resume.row:nth-of-type(2) section:first-of-type p {
+		width: 50%;
+		margin-left: 25%;
+		text-align: left;
+	}
 
 /***********************************************
 MAIN ARTWORK GALLERY
