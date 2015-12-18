@@ -10,17 +10,17 @@
 <body>
     <div class="Wrapper">
 		
-        <Header class="mainArtworkGallery row">
-            <div class="mainArtworkGallery col-lg-6 sm-col-3">
-                <h1>Kristopher C. Paulsen</h1>
+        <Header class="row txtCenter" id="top">
+            <div class="col-sm-12 col-lg-6">
+                <a href="index.html"><h1><span class="activeHvr">Kristopher C. Paulsen</span></h1></a>
             </div
-            ><div class="mainArtworkGallery col-lg-6 sm-col-3">
+            ><div class="col-lg-6 col-sm-12">
                 <nav>
                     <ul>
-                        <li><a href="index.html">Resume</a></li>
+                        <li><a href="index.html" class="activeHvr">Resume</a></li>
                         <div id="hoverMenuWrap">
-                            <li>Projects
-                                <ul id="dropDownMenu">
+                            <li class="activeHvr">Projects
+                                <ul id="dropDownMenu" class="txtCenter">
                                     <li><a href="mainArtworkGallery.html"> Artwork</a></li>
                                     <li><a href="writingSamples.html">Writing Samples</a></li>
                                 </ul>
@@ -35,12 +35,12 @@
             <img src="images/bannerImage_Text.jpg">
         </section>
 
-        <section class="mainArtworkGallery row">
+        <section class="mainArtworkGallery row botBorder">
             <section class="sm-col-3 col-lg-6">
                 <h2>Out of the Office</h2>
                 <p>I spend <em>far</em> too much time sitting infront of a computer screen. Its the new norm for most of us. Now, I'm not complaining, as designing, developing and creating is a deep passion of mine. Still, everything in moderation. After a long day of basking in the gentle glow of florescent lighting, it can be good to get a little natural light. When I'm not working, I'm in the workshop cooking up the next big project.</p>
             </section
-            ><section class="sm-col-3 col-lg-6">
+            ><section class="sm-col-3 col-lg-6 txtCenter">
                 <img src="images/workshop.jpg">
             </section>
         </section>
@@ -65,25 +65,25 @@
         </section>
     </div>
     
-    <footer>
-        <section class="sm-col-3 col-1">
-            <p><span>Contact</span></p>
-            <a href="mailto:kristopherPaulsen@gmail.com"><img src="images/Email-Icon.png"></a>
-            <a href="tel:435-513-0281"><img src="images/Phone-Icon.png"></a>
+	<footer class="row txtCenter">
+        <section class="col-sm-12 col-lg-4">
+            <p><span class="botBorder">Contact</span></p>
+            <a href="mailto:kristopherPaulsen@gmail.com"><img src="images/Email-Icon.png" class="smIcon"></a>
+            <a href="tel:435-513-0281"><img src="images/Phone-Icon.png" class="smIcon"></a>
         </section
-        ><section class="sm-col-3 col-1">
+        ><section class="col-sm-12 col-lg-4">
             <nav>
-                <ul>
-                    <li>Main Navigation links</li>
-                    <li><a href="index.html">Home</a></li>
+				<p><span class="botBorder">Main Navigation</span></p>
+                <ul class="txtLeft">
+					<li><a href="index.html">Home</a></li>
                     <li><a href="index.html">About Me</a></li>
                     <li><a href="mainArtworkGallery.html">Portfolio</li></a>
-				<li><a href="#">Back To Top</li></a>
+				<li><a href="#top">Back To Top</a></li>
                 </ul>
             </nav>
         </section>
 		<section>
-			<p>*Special thanks to <span></span><a href="https://github.com"/>GitHub</a> and <a href="https://useiconic.com/open/">UseIconic</a> for supplying beautiful pixel-perfect icons </p>
+			<p>*Special thanks to <a href="https://github.com"/>GitHub</a> and <a href="https://useiconic.com/open/">UseIconic</a> for supplying beautiful icons </p>
 		</section>
     </footer>
 

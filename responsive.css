@@ -25,7 +25,6 @@ COLUMNS AND LAYOUT
 }
 /*EndRegion*/
 
-
 /*Desktop and Landscape*/ /*Region*/
 
 @media screen and (min-width: 1100px) {
@@ -45,7 +44,7 @@ LAYOUT
         vertical-align: top;
         text-align: left;
     }
- 
+
     Header .col-lg-6:nth-child(2) {
         text-align: right;
     }
@@ -129,23 +128,4 @@ RESUME
 		margin-left: 25%;
 		text-align: left;
 	}
-
-/***********************************************
-MAIN ARTWORK GALLERY
-***********************************************/
-
-
-/***********************************************
-WRITING SAMPLES
-*********************************************/
-
-/*Adds Spacing Between Writing Menu Items */
-
-/*Make Sub Menu items absolutely positioned, Increase size of SUB-MENU Backing*/
-
-
-/*Change Sub-menu list items to inline-blocks, change spacing*/
-	
 }
-
-/*endRegion*/
